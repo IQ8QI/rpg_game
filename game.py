@@ -1,6 +1,6 @@
 def debug(input):
     print("Debug result:")
-    print(input)
+    print(input, '\n')
 
 
 def work_in_progress():
@@ -13,22 +13,22 @@ def init_starting_variables():
     # -1 = NA
     global class_dict
     class_dict = {'1': "Warrior", '2': "Mage", '3': 'Rogue'}
-    global player_class
-    player_class = "-1"
+
 
 
 def error_wrong_input():
-    print("Incorrect command!\nTry again!")
+    print("Incorrect command!\nTry again!\n")
 
 
 def new_game():
     global player_class
+    player_class = "-1"
     while player_class == "-1":
         print("Please select You class")
         print("1 = Warrior")
         print("2 = Mage")
         print("3 = Rogue")
-        user_input = input()
+        user_input = input('\n')
         if (user_input == "1") | (user_input == "2") | (user_input == "3"):
             player_class = user_input
             debug(player_class)
@@ -42,7 +42,8 @@ def load_game():
 
 
 def leave_game():
-    print("See You next time!")
+    print("See You next time!\n*Press Enter key to leave*")
+    input()
     exit()
 
 
@@ -62,13 +63,13 @@ def main():
           \\\\    /  \\
           `"
 Welcome in the RPG_Game
-v0.003""")
+v0.003a""")
     while True:
         print("\nRPG_Game")
         print("1 = New Game (comming sooner)")
         print("2 = Load Game (comming soon)")
         print("3 = Leave game")
-        user_input = input()
+        user_input = input('\n')
         if user_input == "1":
             new_game()
         elif user_input == "2":
